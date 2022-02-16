@@ -14,7 +14,7 @@ fn main() -> anyhow::Result<()> {
     let peripherals = Peripherals::take().unwrap();
     let config = TimerConfig::default().frequency(25.kHz().into());
     let timer = Timer::new(peripherals.ledc.timer0, &config)?;
-    let mut channel = Channel::new(peripherals.ledc.channel0, &timer, peripherals.pins.gpio1)?;
+    let mut channel = Channel::new(peripherals.ledc.channel0, &timer, peripherals.pins.gpio4)?;
 
     info!("Starting duty-cycle loop");
 
