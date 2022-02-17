@@ -24,6 +24,6 @@ fn main() -> anyhow::Result<()> {
         thread::sleep(Duration::from_millis(1000));
 
         led.set_low()?;
-        thread::sleep(Duration::from_millis(100));
+        thread::sleep(Duration::from_millis(1000));
     }
 }
